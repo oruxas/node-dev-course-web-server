@@ -28,7 +28,7 @@ app.use((req, res, next) =>{
 app.use(express.static(__dirname+'/public'));
 
 
-hbs.registerHelper('getCurrYet', ()=>{
+hbs.registerHelper('getCurrYear', ()=>{
     return new Date().getFullYear();
 });
 
