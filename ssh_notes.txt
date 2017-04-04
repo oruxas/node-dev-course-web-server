@@ -1,0 +1,12 @@
+check: $ ls -al ~/.ssh
+
+generate: $ ssh-keygen -t rsa -b 4096 -C 'evaldaskal@gmail.com' 
+
+start agent: $ eval "$(ssh-agent -s)"
+
+id_rsa is private
+id_rsa.pub - public for heroku etc.
+
+tell where ssh lives (path to private): ssh-add ~/.ssh/id_rsa
+
+copy pub dta to ssh in clipboard: clip < ~/.ssh/id_rsa.pub
