@@ -49,6 +49,14 @@ app.get('/about', (req, res)=>{
     });
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+        // this 2nd argument is used to inject data
+        pageTitle: 'Projects Page',
+        welcomeMsg: "Here are some projects"
+    });
+});
+
 app.get('/bad', (req, res)=>{
     var errorMessage = "non existant url";
     res.send({
